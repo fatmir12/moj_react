@@ -1,0 +1,610 @@
+/* Globalne stilove */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #ECF0F1;
+  color: #2C3E50;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2C3E50;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  background-color: #18BC9C;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #2C3E50;
+    flex-direction: column;
+    width: 200px;
+    padding: 1rem;
+    display: none;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Hero sekcija */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #2C3E50, #34495e);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Kartice */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: #f1f1f1;
+}
+
+.card {
+  background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #2C3E50;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to bottom right, #ffffff, #e0e0e0);
+  border: 2px solid #FF7043;
+}
+
+.card img {
+  max-width: 100%;
+  height: 180px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: #2c3e50;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.card p {
+  color: #555;
+}
+
+/* Forme */
+.form-container,
+.contact-container {
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2C3E50;
+}
+
+.auth-form,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-input,
+.form-select {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.form-select {
+  background-color: white;
+}
+
+.cta-btn {
+  background-color: #FF7043;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background-color: #e85c31;
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-footer {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.form-footer a {
+  color: #2C3E50;
+  text-decoration: none;
+}
+
+/* Kontakt sekcija */
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  transition: transform 0.3s;
+}
+
+/* Footer */
+footer {
+  background: #2C3E50;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Reset i osnovno */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ECF0F1;
+  color: #2C3E50;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+/* Navbar */
+.navbar {
+  background-color: #2C3E50;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #18BC9C;
+}
+
+/* Sekcije */
+.section {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2C3E50;
+  text-align: center;
+}
+
+/* Dugme */
+.cta-btn {
+  background-color: #18BC9C;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #15a589;
+}
+
+/* Forme */
+.form-container {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-input:focus {
+  border-color: #18BC9C;
+  outline: none;
+}
+
+.form-footer {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.form-footer a {
+  color: #18BC9C;
+  text-decoration: underline;
+}
+
+/* Events stranica */
+.events-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 2rem;
+}
+
+.event-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.02);
+}
+
+/* Kontakt sekcija */
+.contact-info {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding-top: 1rem;
+}
+
+/* Home stranica */
+.home-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.home-hero h1 {
+  font-size: 2.5rem;
+  color: #2C3E50;
+}
+
+.home-hero p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.15);
+}
+
+.contact-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #2C3E50;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-input, .contact-textarea {
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.contact-textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.contact-btn {
+  background-color: #18BC9C;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #149c84;
+}
+
+.events-container {
+  padding: 50px 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.events-title {
+  font-size: 32px;
+  color: #2C3E50;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.search-filter {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.search-input, .filter-select {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.event-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+
+.event-date {
+  color: #18BC9C;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.event-description {
+  font-size: 15px;
+  color: #555;
+}
+
+.admin-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #ECF0F1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(44, 62, 80, 0.1);
+}
+
+.admin-form {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.admin-form input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.cta-btn {
+  padding: 0.7rem;
+  background-color: #18BC9C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #15a589;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+}
+
+.event-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.admin-controls {
+  margin-top: 0.5rem;
+}
+
+.edit-btn,
+.delete-btn {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #2C3E50;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+}
+
+.auth-form select.form-input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 1rem;
+}
+

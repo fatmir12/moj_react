@@ -1,0 +1,39 @@
+/* src/styles/AdminPanel.css */
+.admin-panel {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.admin-section {
+  margin-bottom: 2rem;
+}
+
+.admin-section h3 {
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.admin-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #4CAF50;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-card button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.admin-card button:hover {
+  background-color: #d32f2f;
+}

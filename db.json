@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "b2c0",
+      "name": "Fatmir",
+      "email": "kurtisifatmir48@gmail.com",
+      "password": "Ps6k851o",
+      "role": "guest"
+    },
+    {
+      "id": "a311",
+      "name": "Kurtisi",
+      "email": "fatmir.kurtisi.24@size.ba",
+      "password": "Ps6k851o.",
+      "role": "admin"
+    },
+    {
+      "id": "f71a",
+      "email": "deni.kosic@gmail.com",
+      "name": "Deni",
+      "password": "12345678",
+      "role": "admin"
+    }
+  ],
+  "messages": [
+    {
+      "id": "cebe",
+      "name": "Fatmir",
+      "email": "kurtisifatmir48@gmail.com",
+      "message": "Ma ja beton"
+    }
+  ],
+  "events": []
+}
